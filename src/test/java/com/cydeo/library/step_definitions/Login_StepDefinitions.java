@@ -34,4 +34,24 @@ loginPage.signInBtn.click();
         loginPage.passwordInputBox.sendKeys("pG3V6qaL");
     }
 
+
+    @And("user enters librarian password {string}")
+    public void userEntersLibrarianPassword(String password) {
+        loginPage.passwordInputBox.sendKeys(password);
+    }
+
+    @When("user enters student username {string}")
+    public void userEntersStudentUsername(String username) {
+        loginPage.emailInputBox.sendKeys(username);
+    }
+
+    @When("user enters librarian username {string}")
+    public void userEntersLibrarianUsername(String username) {
+        loginPage.emailInputBox.sendKeys(username);
+    }
+
+    @And("user enters student password {string}")
+    public void userEntersStudentPassword(String password) {
+        loginPage.passwordInputBox.sendKeys(password);
+    }
 }
